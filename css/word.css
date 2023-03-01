@@ -12,7 +12,7 @@ scroll-behavior: smooth;
 :root{
   --section-padding: 60px;
   --first-color:#00b87a;
-  --second-color:rgba(32,44,70,0.95);;
+  --second-color:#202c46f2;
   --third-color:#ff0048;
   --fourth-color:yellow;
   --font-family: "cairo" , arial;
@@ -190,7 +190,7 @@ body{
       top: 45px;
       left: 30px;
       line-height: 45px;
-      background-image: linear-gradient(130deg, var(--second-color) 50%, #00b87b 90%);
+      background-image: linear-gradient(130deg, #000000a6 50%, #00b87aa3 90%);
   }
 
 }
@@ -210,153 +210,75 @@ body{
   
   color: yellow;
 }
+
 /* end header */
 
 /* start landing */
 .landing{
-  height: 92vh;
-  width: 100%;
+  background-image: linear-gradient(to left, var(--first-color) , var(--second-color));
+  height: 100%;
+  padding: 40px;
 }
-.landing .ma-te-sv{
-  font-size: 80px;
-  position: absolute;
+.landing .container{
+  margin: 0;
+  font-size: 150px;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   color: var(--first-color);
-  top: 0px;
-  width: max-content;
-  animation-name: icon;
+
+}
+
+@keyframes up-and-down{
+  to{
+      opacity: 0.2;
+      transform: translateY(-10px);
+  }
+} 
+
+.landing .container .text{
+  text-align: center;
+  font-size: 30px;
+  line-height: 45px;
+}
+.landing .container .text h2{
+  color: var(--fourth-color);
+  margin:0 0 40px 0;
+  animation-name: up-and-down;
   animation-duration: 0.9s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 @media (max-width : 767px){
-  .landing .ma-te-sv{
-      font-size: 70px;
-      top: 170px;
-      margin: 0;
+  .landing .container .text h2{
+    font-size:25px;
   }
 }
-.landing {
-
-  width: 100%;
-  height: 120vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.landing .container .text p{
+  font-size:20px;
   color: white;
+}
+.landing .container .text span{
+  font-size:30px;
+  margin: 0px 0 0px 50px;
+  color: var(--fourth-color);
 
 }
 @media (max-width : 767px){
-  .landing{
-      height: 220vh;
+  .landing .container .text span{
+    font-size:14px;
+    margin: 0px 0 0px 7px;
   }
-}
-.landing .container{
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 15%;
-    flex-direction: column;
-    animation-name: up-and-down;
-    animation-duration: 0.9s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
-.landing  .card-main{
-  background-image: linear-gradient(to top, var(--first-color) , var(--second-color));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  border-radius: 30px;
-  margin:40px;
-}
-@media (max-width:767px){
-  .landing .card-main {
-    border-radius: 10px;
-  }
-}
-.landing .card-main .text p{
-  font-size: 23px;
-  text-align: center;
-}
-@media (max-width:767px){
-  .landing .card-main .text p{
-    width:100%;
-  }
-}
-.landing .card-main i {
-  font-size: 40px;
-
-}
-.landing  .all-cards{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width:100%;
-}
-@media (max-width:767px){
-  .landing  .all-cards{
-    flex-direction: column;
-    gap:20px;
-  }
-}
-.landing  .card{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--second-color);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 8px 0px var(--first-color);
-}
-.landing  .card i{
-  font-size:35px;
-}
-.landing  .card .text{
-  display: flex;
-  justify-content: center;
-}
-.landing .card .text p{
-  width: 220px;
-  font-size: 15px;
-  text-align: center;
-}
-
-@keyframes up-and-down{
-  to{
-      transform: translateY(-10px);
-  }
-  
-}
-
-@keyframes icon {
-  0%{
-    color: var(--first-color);
-  }
-
-  100%{
-    color: var(--second-color);
-  }
-
-}
 
 /* end landing */
+
 
 /* start footer */
 .footer{
   background-image: linear-gradient(to left, var(--first-color) , var(--second-color));
-  margin: 140px 0 0 0;
-}
-@media (max-width : 767px){
-  .footer{
-    margin: 240px 0 0 0;
-  }
+  box-shadow: 0 0 100px -39px white;
 }
 .footer .container{
   display: flex;

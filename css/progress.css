@@ -12,7 +12,7 @@ scroll-behavior: smooth;
 :root{
     --section-padding: 60px;
     --first-color:#00b87a;
-    --second-color:rgba(32,44,70,0.95);;
+    --second-color:#202c46f2;
     --third-color:#ff0048;
     --fourth-color:yellow;
     --font-family: "cairo" , arial;
@@ -200,6 +200,11 @@ body{
     margin: 5px;
     padding: 7px;
     color: white;
+}
+@media (max-width:767px){
+    .header .container nav ul li .active{
+        display:none;
+    }
 }
 .header .container nav ul li a:hover{
     

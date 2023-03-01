@@ -213,140 +213,129 @@ body{
 /* end header */
 
 /* start landing */
-.landing{
-  height: 92vh;
-  width: 100%;
+.landing .container .video{
+  display:flex;
+  justify-content: center;
+  align-items:center;
 }
-.landing .ma-te-sv{
-  font-size: 80px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--first-color);
-  top: 0px;
-  width: max-content;
-  animation-name: icon;
-  animation-duration: 0.9s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+.landing .container video{
+  width:400px;
 }
 @media (max-width : 767px){
-  .landing .ma-te-sv{
-      font-size: 70px;
-      top: 170px;
-      margin: 0;
+  .landing .container video{
+    width:330px;
   }
 }
-.landing {
+/* end landing */
 
-  width: 100%;
-  height: 120vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-
-}
-@media (max-width : 767px){
-  .landing{
-      height: 220vh;
-  }
-}
-.landing .container{
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 15%;
-    flex-direction: column;
-    animation-name: up-and-down;
-    animation-duration: 0.9s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-.landing  .card-main{
-  background-image: linear-gradient(to top, var(--first-color) , var(--second-color));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  border-radius: 30px;
-  margin:40px;
-}
-@media (max-width:767px){
-  .landing .card-main {
-    border-radius: 10px;
-  }
-}
-.landing .card-main .text p{
-  font-size: 23px;
-  text-align: center;
-}
-@media (max-width:767px){
-  .landing .card-main .text p{
-    width:100%;
-  }
-}
-.landing .card-main i {
-  font-size: 40px;
-
-}
-.landing  .all-cards{
+/* start contact */
+.contact .container .all-contact {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  width:100%;
+  box-shadow: 0 0 25px -10px var(--first-color);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+@media (max-width:767px){
+  .contact .container .all-contact {
+    flex-direction: column;
+  }
+}
+
+.contact .container .all-contact .requests {
+  width: 50%;
 }
 @media (max-width:767px){
-  .landing  .all-cards{
-    flex-direction: column;
-    gap:20px;
+  .contact .container .all-contact .requests{
+    width: 100%;
   }
 }
-.landing  .card{
+
+.contact .container .all-contact .requests .text {
+  margin-bottom: 50px;
+}
+
+.contact .container .all-contact .requests .text p {
+  width: 70%;
+}
+.contact .container .all-contact .requests form .name {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--second-color);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 8px 0px var(--first-color);
+  line-height: 34px;
 }
-.landing  .card i{
-  font-size:35px;
+.contact .container .all-contact .requests form .name input {
+  border-color: transparent;
+  box-shadow: 0 0 3px 0px black;
+  border-radius: 10px;
+  height: 30px;
+  width: 80%;
 }
-.landing  .card .text{
+.contact .container .all-contact .requests form .email {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  line-height: 34px;
 }
-.landing .card .text p{
-  width: 220px;
-  font-size: 15px;
-  text-align: center;
+.contact .container .all-contact .requests form .email input {
+  border-color: transparent;
+  box-shadow: 0 0 3px 0px black;
+  border-radius: 10px;
+  height: 30px;
+  width: 80%;
 }
-
-@keyframes up-and-down{
-  to{
-      transform: translateY(-10px);
+.contact .container .all-contact .requests form .message {
+  display: flex;
+  flex-direction: column;
+  line-height: 34px;
+  margin-bottom: 20px;
+}
+.contact .container .all-contact .requests form .message textarea {
+  border-color: transparent;
+  box-shadow: 0 0 3px 0px black;
+  border-radius: 10px;
+  height: 60px;
+  width: 80%;
+}
+@media (max-width:767px){
+  .contact .container .all-contact .requests form .message textarea{
+    width: 250px;
+    height: 67px;
   }
-  
+}
+.contact .container .all-contact .requests form .sub {
+  padding: 5px;
+  border-radius: 10px;
+  border-color: transparent;
+  background-color: var(--first-color);
+  color: white;
+  max-width: 200px;
+}
+.contact .container .all-contact .phone img {
+  width: 305px;
+  filter: hue-rotate(270deg);
+}
+.contact .container .all-contact .phone .telephone {
+  display: flex;
+  align-items: center;
+}
+.contact .container .all-contact .phone .telephone i {
+  margin-right: 10px;
+}
+.contact .container .all-contact .phone .telephone i {
+  color: #747474;
+}
+.contact .container .all-contact .phone .myMail {
+  display: flex;
+  align-items: center;
+}
+.contact .container .all-contact .phone .myMail i {
+  margin-right: 10px;
+}
+.contact .container .all-contact .phone .myMail i {
+  color: #747474;
 }
 
-@keyframes icon {
-  0%{
-    color: var(--first-color);
-  }
-
-  100%{
-    color: var(--second-color);
-  }
-
-}
-
-/* end landing */
+/* end contact */
 
 /* start footer */
 .footer{
