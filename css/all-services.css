@@ -53,7 +53,7 @@ body{
 .ma-na-1{
   width: 180px;
   text-align: center;
-  margin: 100px 0;
+  margin: 49px 0;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -232,58 +232,11 @@ body{
 }
 .footer .container{
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  padding: 30px;
-}
-@media (min-width:768px){
-  .footer .container{
-      flex-wrap:nowrap;
-  }
-}
-.footer .container .le-fo-in{
-  width: 450px
-}
-@media (max-width:767px){
-  .footer .container .le-fo-in{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-  }
-}
-.footer .container .le-fo-in .text{
-  border-bottom: 1px solid;
-  width: fit-content;
+  padding: 10px;
 }
 .footer .container .le-fo-in .text h2{
-  color: var(--first-color);
-}
-.footer .container .le-fo-in .text .to-fo-1{
   color: white;
-}
-.footer .container .le-fo-in .text p{
-  width: 300px;
-  margin: 30px 0;
-  color:var(--fourth-color);
-}
-
-.footer .container .le-fo-in .social i{
-  margin: 15px;
-  font-size: 25px;
-  color: var(--first-color);
-}
-.footer .container .le-fo-in .social .fa{
-  color: rgb(255, 255, 255);
-}
-.footer .container .le-fo-in .social .yo{
-  color: rgb(255 34 34) ;
-}
-.footer .container .le-fo-in .social .te{
-  color: rgb(107 164 255);
 }
 
 /* end footer */
