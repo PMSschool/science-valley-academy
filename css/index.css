@@ -242,8 +242,10 @@ body{
 
 
 .landing {
-
-    display: flex;
+background-image: url("../image/ajaja.jpg");
+background-size: cover;
+height: 75.7vh;
+width:100%;
 }
 
 .landing  .info{
