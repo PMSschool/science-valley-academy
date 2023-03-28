@@ -207,7 +207,7 @@ body{
         border-style: solid;
         transform: translate(-165px, -19px);
     }
-    .header .container .link:hover ul{
+    /* .header .container .link:hover ul{
         display: flex;
         position: absolute;
         z-index: 999999;
@@ -216,7 +216,7 @@ body{
         left: 30px;
         line-height: 45px;
         background-image: linear-gradient(130deg, #000000a6 50%, #00b87aa3 90%);
-    }
+    } */
 
 }
 

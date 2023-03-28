@@ -222,16 +222,37 @@ body{
 .landing .ma-te-sv{
     margin: 0;
     font-size: 150px;
-    position: absolute;
-    left: 50%;
+    left: 67%;
     transform: translateX(-50%);
-    color: var(--first-color);
-    top: 100px;
+    top: 50px;
+    -webkit-text-fill-color: white;
+    position: relative;
+}
+.landing .ma-te-sv::before{
+    width: 0;
+    overflow: hidden;
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-text-fill-color: var(--first-color);
+    animation-name: full;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+@keyframes full{
+    to{
+        width:100%
+    }
 }
 @media (max-width : 767px){
     .landing .ma-te-sv{
         font-size: 70px;
-        top: 170px;
+    top: 150px;
+    transform: translatex(-70%);
+    width: fit-content;
     }
 }
 .landing .overlay{
