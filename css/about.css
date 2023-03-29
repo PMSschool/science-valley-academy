@@ -12,7 +12,7 @@ scroll-behavior: smooth;
 :root{
   --section-padding: 60px;
   --first-color:#00b87a;
-  --second-color:rgba(32,44,70,0.95);;
+  --second-color:rgba(32,44,70,0.95);
   --third-color:#ff0048;
   --fourth-color:yellow;
   --font-family: "cairo" , arial;
@@ -141,12 +141,12 @@ body{
   width: 100%;
 }
 
-@media (min-width:768px){
+@media (min-width:990px){
   .header .container i{
       display: none;
   }
 }
-@media (max-width:767px){
+@media (max-width:989px){
   .header .container i{
       padding:15px;
       font-size:20px;
@@ -162,37 +162,60 @@ body{
   display: flex;
   justify-content: center;
 }
+
+@media (max-width:989px){
+  .header .container nav{
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:99999999;
+  width:100%;
+  height:100%;
+  background-image:linear-gradient(to left , var(--first-color), rgb(32, 44, 70));
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  transform:translateX(-100%);
+  transition:0.5s;
+}
+nav.open{
+  transform: translateX(0%)!important;
+}
+.header .container nav ul li a{
+  color:white;
+  font-size:20px;
+  border-bottom: 1px solid;
+}
+.header .container nav ul li a:hover{
+  color:var(--fourth-color);
+}
+.header .container nav ul{
+  display:flex;
+  flex-direction:column;
+  transition:0.5s;
+  gap:45px;
+  padding:0;
+ }
+ .header .container nav i{
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  color: var(--first-color);
+  font-size: 25px;
+  border: 2px solid;
+  padding: 4px 10px;
+  border-radius: 50%;
+}
+.header .container nav i:hover{
+  color: var(--fourth-color);
+}
+}
+
 .header .container nav ul{
   list-style: none;
   display: flex;
   direction: rtl;
-}
-@media (max-width:767px){
-  .header .container nav ul{
-      display: none;
-  }
-  .header .container nav ul:hover{
-      margin-right: 10px;
-  }
-  .header .container nav ul::before{
-      content: "";
-      position: absolute;
-      border-width: 10px;
-      border-color: transparent transparent #0000009e transparent;
-      border-style: solid;
-      transform: translate(-165px, -19px);
-  }
-  .header .container .link:hover ul{
-      display: flex;
-      position: absolute;
-      z-index: 999999;
-      flex-direction: column;
-      top: 45px;
-      left: 30px;
-      line-height: 45px;
-      background-image: linear-gradient(130deg, var(--second-color) 50%, #00b87b 90%);
-  }
-
 }
 
 .header .container nav ul li a{
@@ -201,16 +224,10 @@ body{
   padding: 7px;
   color: white;
 }
-@media (max-width:767px){
-  .header .container nav ul li .active{
-      display:none;
-  }
-}
 .header .container nav ul li a:hover{
-  
   color: yellow;
 }
-/* end header */
+/* end header  */
 
 /* start landing */
 .landing{
@@ -230,7 +247,7 @@ body{
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-@media (max-width : 767px){
+@media (max-width : 989px){
   .landing .ma-te-sv{
       font-size: 70px;
       top: 170px;
@@ -247,7 +264,7 @@ body{
   color: white;
 
 }
-@media (max-width : 767px){
+@media (max-width : 989px){
   .landing{
       height: 220vh;
   }
@@ -275,7 +292,7 @@ body{
   border-radius: 30px;
   margin:40px;
 }
-@media (max-width:767px){
+@media (max-width:989px){
   .landing .card-main {
     border-radius: 10px;
   }
@@ -284,7 +301,7 @@ body{
   font-size: 23px;
   text-align: center;
 }
-@media (max-width:767px){
+@media (max-width:989px){
   .landing .card-main .text p{
     width:100%;
   }
@@ -299,7 +316,7 @@ body{
   align-items: center;
   width:100%;
 }
-@media (max-width:767px){
+@media (max-width:989px){
   .landing  .all-cards{
     flex-direction: column;
     gap:20px;
@@ -315,6 +332,11 @@ body{
   border-radius: 15px;
   box-shadow: 0 0 8px 0px var(--first-color);
 }
+@media (max-width:989px){
+  .landing .card{
+      width:90%;
+  }
+}
 .landing  .card i{
   font-size:35px;
 }
@@ -322,12 +344,17 @@ body{
   display: flex;
   justify-content: center;
 }
+
 .landing .card .text p{
   width: 220px;
   font-size: 15px;
   text-align: center;
 }
-
+@media (min-width:768px) and (max-width:989px){
+  .landing .card .text p{
+      width:50%;
+  }
+}
 @keyframes up-and-down{
   to{
       transform: translateY(-10px);

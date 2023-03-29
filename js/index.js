@@ -1,14 +1,14 @@
-let scrollicon = document.querySelector("i.fa-solid.fa-arrow-up");
+let scrollIcon = document.querySelector("i.fa-solid.fa-arrow-up");
 
 window.onscroll = function (){
   if(window.scrollY >= 600){
-    scrollicon.classList.add("show");
+    scrollIcon.classList.add("show");
   }else{
-    scrollicon.classList.remove("show");
+    scrollIcon.classList.remove("show");
   }
-}
+};
 
-scrollicon.onclick = function () {
+scrollIcon.onclick = function () {
   window.scrollTo({
     left: 0,
     top: 0,
@@ -19,11 +19,15 @@ scrollicon.onclick = function () {
 
 
 
-let toggleMenu = document.querySelector("i.fa-sharp fa-solid fa-bars-staggered");
-let headUl = document.querySelector(".header-ul");
+let toggle = document.querySelector(".toggle");
+let navInHead = document.querySelector("nav");
+let closeNav = document.querySelector(".close");
 
-toggleMenu.onclick = function (){
-  headUl.style.display = "flex";
+toggle.onclick = function (){
+  navInHead.classList.add("open");
+}
+closeNav.onclick = function (){
+  this.parentElement.classList.remove("open");
 }
 
 
