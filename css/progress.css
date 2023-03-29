@@ -273,7 +273,7 @@ body{
 }
 @media (max-width : 560px){
     .landing .ma-te-sv{
-    font-size: 70px;
+    font-size: 65px;
     top: 150px;
     transform: translatex(-70%);
     width: fit-content;
