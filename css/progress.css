@@ -20,7 +20,8 @@ scroll-behavior: smooth;
 }
 
 body{
-    font-family: "cairo" ,sans-serif;
+    font-family: system-ui;
+    overflow-x: hidden;
 }
 
 .container{
